@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles.css"/>
+  <title>Getting Things Done v0.00001</title>
+</head>
+<body>
+  <div id="gtd">
+    <h1>Getting Things done</h1>
+    <ul class="statuses"></ul>
+    <button class="add-ticket-btn" data-ticket-type="task">Add Task</button>
+    <button class="add-ticket-btn" data-ticket-type="bug">Add Bug</button>
+  </div>
+
+  <!-- TEMPLATES -->
+  <script id="gdt-status-template" type="text/underscore-template">
+    <li>
+      <div class="status">
+        <div class="name"><%= name %></div>
+        <ul class="tickets"></ul>
+      </div>
+    </li>
+  </script>
+
+  <script id="gdt-position-template" type="text/underscore-template">
+    <li class="position" data-position="<%= index %>" data-status="<%= status_id %>"></li>
+  </script>
+
+  <script id="gdt-ticket-template" type="text/underscore-template">
+    <li class="ticket-container <%= ticket.type %>">
+      <div class="ticket"
+           draggable="true"
+           data-ticket-id="<%= ticket.id %>"
+           data-position="<%= index %>"
+           data-status="<%= status_id %>">
+        <span class="ticket-id">#<%= ticket.id %></span>
+        <span class="ticket-name"><%= ticket.name %></span>
+        <div class="toolbar">
+          <span class="remove btn">&#10006;</span>
+        </div>
+      </div>
+      <div class="editor">
+        <textarea class="name-input"><%= ticket.name %></textarea>
+        <div class="toolbar">
+          <a href="#" class="save btn">save</a>
+        </div>
+      </div>
+    </li>
+  </script>
+  <!-- /TEMPLATES -->
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/status.js"></script>
+  <script type="text/javascript" src="/js/ticket.js"></script>
+  <script type="text/javascript" src="/js/position.js"></script>
+  <script type="text/javascript">
+    new GTD.App();
+  </script>
+</body>
+</html>

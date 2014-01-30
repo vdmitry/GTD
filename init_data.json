@@ -1,0 +1,22 @@
+{
+  "statuses": [
+    {
+      "id": "todo",
+      "name": "ToDo",
+      "tickets": [
+      ]
+    },
+    {
+      "id": "in_progress",
+      "name": "In Progress",
+      "tickets": [
+      ]
+    },
+    {
+      "id": "done",
+      "name": "Done",
+      "tickets": [
+      ]
+    }
+  ]
+}

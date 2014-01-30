@@ -1,0 +1,92 @@
+/* STATUSES */
+#gtd .statuses {
+  list-style: none;
+  padding: 0;
+}
+#gtd .statuses .name {
+  padding: 10px;
+  font-size: 180%;
+  border-bottom: 1px dotted;
+}
+#gtd .statuses > li {
+  display: table-cell;
+  width: 200px;
+  border-right: 1px dotted;
+  vertical-align: top;
+}
+#gtd .statuses > li:last-child {
+  border-right: none;
+}
+
+/* TICKETS */
+#gtd .tickets {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+#gtd .tickets .position {
+  height: 10px;
+}
+#gtd .tickets .position:last-child {
+  height: 40px;
+  border: 1px solid #eee;
+  background-color: #ffc;
+  margin-top: 25px;
+}
+#gtd .tickets .position.highlight {
+  background-color: #ff9;
+}
+#gtd .tickets .ticket-container {
+  position: relative;
+  min-height: 50px;
+}
+#gtd .tickets .ticket-container.bug {
+  background-color: #FA8072;
+}
+#gtd .tickets .ticket-container.task {
+  background-color: #AFEEEE;
+}
+#gtd .tickets .ticket {
+  cursor: text;
+  margin: 5px;
+  min-height: 50px;
+}
+#gtd .tickets .ticket-id {
+  color: #666;
+}
+#gtd .tickets .ticket-name {
+  white-space: pre-wrap;
+}
+#gtd .tickets .ticket .toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* EDITOR MODE */
+#gtd .tickets .edit-mode .ticket,
+#gtd .tickets .editor {
+  display: none;
+}
+
+#gtd .tickets .edit-mode .editor {
+  display: block;
+  margin: 5px;
+}
+#gtd .tickets .editor .name-input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: rgba(255,255,255,0.5);
+  font-family: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+#gtd .tickets .editor .toolbar {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 80%;
+}
